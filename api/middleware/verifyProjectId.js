@@ -18,3 +18,5 @@ const verifyProjectId = (req, res, next) => {
         res.status(500).json({ message: "internal error" })
     })
 }
+
+module.exports = verifyProjectId;
