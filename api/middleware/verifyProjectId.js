@@ -12,7 +12,7 @@ const verifyProjectId = (req, res, next) => {
             next();
         }
         else {
-            res.status(404).json({ errorMessage: "the project cannot be retrieved" });
+            res.status(404).json({ errorMessage: "the project with given id does not exist" });
         }
     }).catch(() => {
         res.status(500).json({ message: "internal error" })
